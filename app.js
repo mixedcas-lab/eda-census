@@ -423,7 +423,7 @@
       $("ax-xlog").checked = isLog(c.x, F.xs); $("ax-ylog").checked = isLog(c.y, F.ys);
     }
     $("color").value = F.color;
-    $("color").parentNode.hidden = $("hl").parentNode.hidden = !!c.count;   // trend charts have their own colours
+    $("color").parentNode.style.display = $("hl").parentNode.style.display = c.count ? "none" : "";   // trend charts have their own colours
     $("hl").value = F.hl;
     $("zoom-reset").hidden = !F.zoom;
     $("plot-title").textContent = c.title;
@@ -471,7 +471,7 @@
     g.push("</svg>");
     $("plot").innerHTML = g.join("");
     PG = { W: W, H: H, L: L, R: R, T: T, B: B, dx: dx, dy: dy, title: c.title, legend: d.series.map(function (s) { return [s.label, s.color]; }) };
-    $("plot-note").innerHTML = '<span class="cbar">' + d.series.map(function (s) {
+    $("plot-note").innerHTML = '<span class="cbar trend-key">' + d.series.map(function (s) {
       return '<span style="margin-right:12px"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:' + s.color + ';margin-right:4px"></span>' + esc(s.label) + "</span>";
     }).join("") + "</span>";
   }
