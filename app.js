@@ -423,6 +423,7 @@
       $("ax-xlog").checked = isLog(c.x, F.xs); $("ax-ylog").checked = isLog(c.y, F.ys);
     }
     $("color").value = F.color;
+    $("color").parentNode.hidden = $("hl").parentNode.hidden = !!c.count;   // trend charts have their own colours
     $("hl").value = F.hl;
     $("zoom-reset").hidden = !F.zoom;
     $("plot-title").textContent = c.title;
@@ -942,7 +943,7 @@
       if (ALL.length) {
         $("lede").innerHTML = "<strong>" + nC.toLocaleString() + " analog/mixed-signal design-automation papers</strong> (" + ALL.filter(function (p) { return p.lv === "core" && p.ty === "ML-based"; }).length + " ML-based) from " + venues +
           " IEEE circuits venues, " + esc(fmtDate(META.coverage_from)) + " to " + esc(fmtDate(META.coverage_to)) +
-          ". Updated automatically on the 15th of every month; last update " + esc(META.updated || "") + (META.last_run_new ? ", with " + META.last_run_new + " papers added in the latest update." : ".");
+          ". Updated automatically on the 15th of every month; last update " + esc(META.updated || "") + (META.last_run_new ? ", with " + META.last_run_new + (META.last_run_new === 1 ? " paper" : " papers") + " added in the latest update." : ".");
       } else {
         $("lede").textContent = "A monthly index of analog/mixed-signal circuit design automation papers in ISSCC, VLSI, JSSC, CICC, ESSCIRC, A-SSCC, SSC-L, TCAS-I/II and TVLSI.";
       }
