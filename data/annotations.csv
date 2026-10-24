@@ -1,0 +1,4 @@
+id,exclude,type,task,method,circuit,speedup,node,area,silicon,note,by
+# One row per paper. id = IEEE article number. Leave a cell empty to keep the automatic value; - removes a wrong value.
+# exclude=1 drops a false positive. type = ML-based or Conventional. task/method/circuit take several values separated by ";" (e.g. Sizing/optimization;Layout automation, RL;GNN, ADC).
+# Units: speedup in x; node in nm; area in mm2. silicon = 1 if the result was demonstrated in silicon.

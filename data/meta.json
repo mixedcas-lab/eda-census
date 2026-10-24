@@ -1,0 +1,25 @@
+{
+ "title": "Circuit Design Automation Census",
+ "source": "IEEE Xplore API (records collected by adc-census)",
+ "updated": "2026-10-24",
+ "coverage_from": "1997-01",
+ "coverage_to": "2026-08",
+ "total": 196,
+ "core": 106,
+ "by_venue": {
+  "TCAS-I": 27,
+  "TVLSI": 25,
+  "JSSC": 24,
+  "CICC": 1,
+  "SSC-L": 9,
+  "TCAS-II": 14,
+  "VLSI": 3,
+  "DATE": 1,
+  "ISSCC": 2
+ },
+ "by_type": {
+  "Conventional": 85,
+  "ML-based": 21
+ },
+ "last_run_new": 1
+}
