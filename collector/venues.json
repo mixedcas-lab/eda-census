@@ -1,5 +1,5 @@
 {
- "_comment": "since_year: first publication year shown. cache: the adc-census record cache on this server (overridable with $EDA_CENSUS_CACHE or --cache); adc-census collects DAC, ICCAD, DATE and TCAD from 2012 (the DAC query also returns ASP-DAC). venues: regex on the IEEE publication_title that assigns the venue.",
+ "_comment": "since_year: first publication year shown. cache: the adc-census record cache on this server (overridable with $EDA_CENSUS_CACHE or --cache); adc-census collects DAC, ICCAD, DATE and TCAD from 2012 (the DAC query also returns ASP-DAC). venues: regex on the IEEE publication_title that assigns the venue. extra_cache: Crossref/OpenAlex records of DAC, ICCAD, DATE and TCAD kept by accel-census; IEEE records with the same DOI win.",
  "since_year": 1997,
  "cache": "~/adc-census/cache/raw",
  "venues": [
@@ -63,5 +63,6 @@
    "name": "DATE",
    "match": "design, automation (&|and) test in europe"
   }
- ]
+ ],
+ "extra_cache": "~/accel-census/cache/acm"
 }

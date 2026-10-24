@@ -55,11 +55,20 @@ def save_json(path, obj, compact=False):
     os.replace(tmp, path)
 
 
+EXTRA_CACHE = None    # set from venues.json "extra_cache": DAC/ICCAD/DATE/TCAD records that accel-census fetched from Crossref/OpenAlex
+
+
 def iter_cache(cache):
-    if not os.path.isdir(cache):
+    """IEEE records first, then the Crossref/OpenAlex records (dropped in rebuild() when the IEEE copy exists)."""
+    for d in (cache, EXTRA_CACHE):
+        yield from _iter_dir(d)
+
+
+def _iter_dir(cache):
+    if not cache or not os.path.isdir(cache):
         return
     for fn in os.listdir(cache):
-        if fn.endswith(".json"):
+        if fn.endswith(".json") and not fn.startswith("_"):
             a = load_json(os.path.join(cache, fn), None)
             if a:
                 yield a
@@ -166,8 +175,13 @@ def rebuild(config, cache, run_date):
     venues = config["venues"]
     since = config.get("since_year")
     old = {p["id"]: p for p in load_json(PAPERS, [])}
-    papers = []
+    papers, seen = [], set()
     for a in iter_cache(cache):
+        doi = (a.get("doi") or "").lower()
+        if doi and doi in seen:
+            continue
+        if doi:
+            seen.add(doi)
         r = build_record(a, venues)
         if not r or (since and r["y"] and r["y"] < since):
             continue
@@ -248,6 +262,8 @@ def main():
     ap.add_argument("--report", action="store_true")
     args = ap.parse_args()
     config = load_json(CONFIG, None)
+    global EXTRA_CACHE
+    EXTRA_CACHE = os.path.expanduser(config.get("extra_cache") or "") or None
     cache = cache_dir(config, args.cache)
     if not os.path.isdir(cache):
         log("ERROR: cache directory not found: %s" % cache)

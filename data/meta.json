@@ -4,22 +4,25 @@
  "updated": "2026-10-24",
  "coverage_from": "1997-01",
  "coverage_to": "2026-08",
- "total": 196,
- "core": 106,
+ "total": 392,
+ "core": 277,
  "by_venue": {
   "TCAS-I": 27,
+  "DAC": 52,
   "TVLSI": 25,
   "JSSC": 24,
   "CICC": 1,
+  "TCAD": 83,
   "SSC-L": 9,
+  "ICCAD": 32,
   "TCAS-II": 14,
   "VLSI": 3,
-  "DATE": 1,
+  "DATE": 5,
   "ISSCC": 2
  },
  "by_type": {
-  "Conventional": 85,
-  "ML-based": 21
+  "Conventional": 177,
+  "ML-based": 100
  },
  "last_run_new": 0
 }

@@ -13,7 +13,7 @@
 
 ## 대상
 
-- **설계자동화 학회·저널 (2012년부터):** DAC, ICCAD, DATE, ASP-DAC, TCAD
+- **설계자동화 학회·저널 (2012년부터):** DAC, ICCAD, DATE, ASP-DAC, TCAD (IEEE 수집 전까지는 accel-census가 Crossref·OpenAlex에서 받은 기록을 함께 읽음)
 - **회로 학회·저널:** ISSCC, VLSI, JSSC, CICC, ESSCIRC/ESSERC, A-SSCC, SSC-L, TCAS-I/II, TVLSI (합성형 회로, 생성기, 자동 레이아웃을 쓴 칩 논문)
 
 논리 합성, FPGA 매핑, 타이밍 분석, 클록 트리 같은 디지털 EDA는 범위 밖입니다.
