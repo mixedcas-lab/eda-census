@@ -1,21 +1,22 @@
 {
  "title": "Circuit Design Automation Census",
  "source": "IEEE Xplore API (records collected by adc-census)",
- "updated": "2026-10-25",
+ "updated": "2026-10-26",
  "coverage_from": "1997-01",
  "coverage_to": "2026-10",
- "total": 496,
- "core": 345,
+ "total": 600,
+ "core": 437,
  "by_venue": {
   "TCAD": 84,
   "TCAS-I": 27,
-  "DAC": 52,
+  "DAC": 77,
   "TVLSI": 25,
   "JSSC": 24,
-  "DATE": 32,
+  "DATE": 50,
   "CICC": 15,
+  "ASP-DAC": 37,
   "SSC-L": 9,
-  "ICCAD": 32,
+  "ICCAD": 44,
   "TCAS-II": 14,
   "VLSI": 12,
   "A-SSCC": 8,
@@ -23,8 +24,8 @@
   "ESSCIRC": 2
  },
  "by_type": {
-  "Conventional": 235,
-  "ML-based": 110
+  "Conventional": 287,
+  "ML-based": 150
  },
- "last_run_new": 1
+ "last_run_new": 32
 }
