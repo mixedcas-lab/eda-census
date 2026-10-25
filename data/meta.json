@@ -4,14 +4,15 @@
  "updated": "2026-10-25",
  "coverage_from": "1997-01",
  "coverage_to": "2026-10",
- "total": 461,
- "core": 318,
+ "total": 496,
+ "core": 345,
  "by_venue": {
   "TCAD": 84,
   "TCAS-I": 27,
   "DAC": 52,
   "TVLSI": 25,
   "JSSC": 24,
+  "DATE": 32,
   "CICC": 15,
   "SSC-L": 9,
   "ICCAD": 32,
@@ -19,12 +20,11 @@
   "VLSI": 12,
   "A-SSCC": 8,
   "ISSCC": 9,
-  "ESSCIRC": 2,
-  "DATE": 5
+  "ESSCIRC": 2
  },
  "by_type": {
-  "Conventional": 217,
-  "ML-based": 101
+  "Conventional": 235,
+  "ML-based": 110
  },
- "last_run_new": 27
+ "last_run_new": 1
 }
